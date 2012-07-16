@@ -1,0 +1,91 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <%= image_tag @bar.photo.url(:minithumb) %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @bar.name %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%= @bar.address %>
+</p>
+
+<p>
+  <b>City:</b>
+  <%= @bar.city %>
+</p>
+
+<p>
+  <b>Province:</b>
+  <%= @bar.province %>
+</p>
+
+<p>
+  <b>Country:</b>
+  <%= @bar.country %>
+</p>
+
+<p>
+  <b>Postalcode:</b>
+  <%= @bar.postalcode %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @bar.description %>
+</p>
+
+<p>
+  <b>Webpage:</b>
+  <%= @bar.webpage %>
+</p>
+
+<p>
+  <b>Twitter profile:</b>
+  <%= @bar.twitter_profile %>
+</p>
+
+<p>
+  <b>Faceboo kprofile:</b>
+  <%= @bar.facebook_profile %>
+</p>
+
+<p>
+  <b>Business hours:</b>
+  <%= @bar.business_hours %>
+</p>
+
+<p>
+  <b>Latidude:</b>
+  <%= @bar.latidude %>
+</p>
+
+<p>
+  <b>Longitude:</b>
+  <%= @bar.longitude %>
+</p>
+<p>
+  <b>Tags</b>
+  <% @bar.tags.each do |tag| %>
+    <%= tag.name %>
+  <% end %>
+</p>
+
+<p>
+  <b>Created at:</b>
+  <%= @bar.created_at.strftime('%d %B %Y') %> <br/>
+  hace <%= distance_of_time_in_words(DateTime.now, @bar.created_at) %>
+</p>
+
+<p>
+  <b>Updated at:</b>
+  <%= @bar.updated_at.strftime('%d %B %Y') %>
+</p>
+
+
+<%= link_to 'Edit', edit_bar_path(@bar) %> |
+<%= link_to 'Back', bars_path %>

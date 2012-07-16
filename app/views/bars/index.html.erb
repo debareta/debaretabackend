@@ -1,0 +1,53 @@
+<h1>Listing bars</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Address</th>
+    <th>City</th>
+    <th>Province</th>
+    <th>Country</th>
+    <th>Postalcode</th>
+    <th>Description</th>
+    <th>Type</th>
+    <th>Webpage</th>
+    <th>Twitter profile</th>
+    <th>Facebook profile</th>
+    <th>Business hours</th>
+    <th>Latidude</th>
+    <th>Longitude</th>
+    <th>Created at</th>
+    <th>Updated at</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @bars.each do |bar| %>
+  <tr>
+    <td><%= bar.name %></td>
+    <td><%= bar.address %></td>
+    <td><%= bar.city %></td>
+    <td><%= bar.province %></td>
+    <td><%= bar.country %></td>
+    <td><%= bar.postalcode %></td>
+    <td><%= bar.description %></td>
+    <td><%= bar.type %></td>
+    <td><%= bar.webpage %></td>
+    <td><%= bar.twitter_profile %></td>
+    <td><%= bar.facebook_profile %></td>
+    <td><%= bar.business_hours %></td>
+    <td><%= bar.latidude %></td>
+    <td><%= bar.longitude %></td>
+    <td><%= bar.created_at %></td>
+    <td><%= bar.updated_at %></td>
+    <td><%= link_to 'Show', bar %></td>
+    <td><%= link_to 'Edit', edit_bar_path(bar) %></td>
+    <td><%= link_to 'Destroy', bar, :method => :delete, :data => { :confirm => 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Bar', new_bar_path %>
