@@ -1,6 +1,13 @@
-<h1>Editing bar</h1>
+<div class="navbar">
+    <div class="btn-group">
+        <div class="btn btn-menu span50 btn-small fuente1 left"><%= link_to 'Ver Perfil', @bar %></div>
+        <div class="btn btn-menu span50 btn-small fuente1 left"><%= link_to 'Volver', bars_path %></div>
+    </div>
+</div>
 
-<%= render 'form' %>
+<div class="container">
+	<h1 class="nuevoB">Editing bar</h1>
 
-<%= link_to 'Show', @bar %> |
-<%= link_to 'Back', bars_path %>
+	<%= render 'form' %>
+	
+</div>
