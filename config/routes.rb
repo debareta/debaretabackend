@@ -3,7 +3,15 @@ Debareta::Application.routes.draw do
 
   resources :bars
   
+  resources :users
+
+  resource :session, :only => [:new, :create, :destroy]
+  
   root :to => "home#index"
+  
+  match 'login'  => 'sessions#new',     :as => :login
+  match 'logout' => 'sessions#destroy', :as => :logout
+  match 'signup' => 'users#new',        :as => :signup
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
