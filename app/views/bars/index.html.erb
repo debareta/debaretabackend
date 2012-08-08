@@ -1,53 +1,66 @@
-<h1>Listing bars</h1>
+<div class="navbar">
+    <div class="btn-group">
+        <div class="btn btn-menu span100 btn-small fuente1 left"><%= link_to 'Nuevo Bar', new_bar_path %></div>
+    </div>
+</div>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Address</th>
-    <th>City</th>
-    <th>Province</th>
-    <th>Country</th>
-    <th>Postalcode</th>
-    <th>Description</th>
-    <th>Type</th>
-    <th>Webpage</th>
-    <th>Twitter profile</th>
-    <th>Facebook profile</th>
-    <th>Business hours</th>
-    <th>Latidude</th>
-    <th>Longitude</th>
-    <th>Created at</th>
-    <th>Updated at</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<div class="container">
+    <h1 class="nuevoB">Lista de Bares</h1>
+    <div class="tabla">
+        <table  class="table table-striped" id="example">
+            <thead>
+              <tr>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th><div class="btn btn-inverse btn-small">Nombre</div></th>
+                <th><div class="btn btn-inverse btn-small">Dirección</div></th>
+                <th><div class="btn btn-inverse btn-small">Ciudad</div></th>
+                <th><div class="btn btn-inverse btn-small">Provincia</div></th>
+                <th><div class="btn btn-inverse btn-small">País</div></th>
+                <th><div class="btn btn-inverse btn-small">Código Postal</div></th>
+                <th><div class="btn btn-inverse btn-small">Descripción</div></th>
+                <th><div class="btn btn-inverse btn-small">Tipo</div></th>
+                <th><div class="btn btn-inverse btn-small">Web</div></th>
+                <th><div class="btn btn-inverse btn-small">Twitter</div></th>
+                <th><div class="btn btn-inverse btn-small">Facebook</div></th>
+                <th><div class="btn btn-inverse btn-small">Horario</div></th>
+                <th><div class="btn btn-inverse btn-small">Latitud</div></th>
+                <th><div class="btn btn-inverse btn-small">Longitud</div></th>
+                <th><div class="btn btn-inverse btn-small">Creado</div></th>
+                <th><div class="btn btn-inverse btn-small">Modificado</div></th>
+              </tr>
+            </thead>
+            <tbody>
+        <% @bars.each do |bar| %>
+              <tr>
+                <td> <div class="btn btn-warning btn-mini"><%= link_to 'Ver', bar %></div></td>
+                <td> <div class="btn btn-warning btn-mini"><%= link_to 'Editar', edit_bar_path(bar) %></div></td>
+                <td> <div class="btn btn-danger btn-mini"><%= link_to 'Eliminar', bar, :method => :delete, :data => { :confirm => 'Are you sure?' } %></div></td>
+                <td><%= bar.name %></td>
+                <td><%= bar.address %></td>
+                <td><%= bar.city %></td>
+                <td><%= bar.province %></td>
+                <td><%= bar.country %></td>
+                <td><%= bar.postalcode %></td>
+                <td><%= bar.description %></td>
+                <td><%= bar.type %></td>
+                <td><%= bar.webpage %></td>
+                <td><%= bar.twitter_profile %></td>
+                <td><%= bar.facebook_profile %></td>
+                <td><%= bar.business_hours %></td>
+                <td><%= bar.latidude %></td>
+                <td><%= bar.longitude %></td>
+                <td><%= bar.created_at %></td>
+                <td><%= bar.updated_at %></td>
+              </tr>
+        <% end %>
+            </tbody>
+        </table>
+    </div>
+    <br />
 
-<% @bars.each do |bar| %>
-  <tr>
-    <td><%= bar.name %></td>
-    <td><%= bar.address %></td>
-    <td><%= bar.city %></td>
-    <td><%= bar.province %></td>
-    <td><%= bar.country %></td>
-    <td><%= bar.postalcode %></td>
-    <td><%= bar.description %></td>
-    <td><%= bar.type %></td>
-    <td><%= bar.webpage %></td>
-    <td><%= bar.twitter_profile %></td>
-    <td><%= bar.facebook_profile %></td>
-    <td><%= bar.business_hours %></td>
-    <td><%= bar.latidude %></td>
-    <td><%= bar.longitude %></td>
-    <td><%= bar.created_at %></td>
-    <td><%= bar.updated_at %></td>
-    <td><%= link_to 'Show', bar %></td>
-    <td><%= link_to 'Edit', edit_bar_path(bar) %></td>
-    <td><%= link_to 'Destroy', bar, :method => :delete, :data => { :confirm => 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>
-
-<br />
-
-<%= link_to 'New Bar', new_bar_path %>
+    <div class="btn btn-menu pull-right margin1">
+    <%= link_to 'Nuevo Bar', new_bar_path %>
+    </div>
+</div>

@@ -1,91 +1,110 @@
-<p id="notice"><%= notice %></p>
+<div class="navbar">
+    <div class="btn-group">
+        <div class="btn btn-menu span50 btn-small fuente1 left"><%= link_to 'Editar', edit_bar_path(@bar) %></div>
+        <div class="btn btn-menu span50 btn-small fuente1 left"><%= link_to 'Volver', bars_path %></div>
+    </div>
+</div>
 
-<p>
-  <%= image_tag @bar.photo.url(:minithumb) %>
-</p>
+<div class="container">
+  
+  <h1 class="nuevoB">
+    <span class="left">Perfíl de <%= @bar.name %></span> 
+    <span class="right">
+    <%= image_tag @bar.photo.url(:thumb) %><!--he cambiado de :minithumb a :thumb y se ha agrandado un poco pero sería lo suyo saber como hacerlo mas grande sin css porque lo he probado y queda mal-->
+  </span><div class="limpiar"></div>
+  </h1> 
+  
+  <p id="notice"><%= notice %></p>
+  <div class="accordion"><!--Se repite id, y a lo corregire-->
+    <h3 class="field_prefil">Datos generales</h3>
+    <div class="field_prefil">
+      <p>
+        <span class="label_perfil left">Nombre:</span>
+        <span classs="right"><%= @bar.name %></span>
+      </p>
 
-<p>
-  <b>Name:</b>
-  <%= @bar.name %>
-</p>
+      <p>
+        <span class="label_perfil left">Dirección:</span>
+        <span classs="right"><%= @bar.address %></span>
+      </p>
 
-<p>
-  <b>Address:</b>
-  <%= @bar.address %>
-</p>
+      <p>
+        <span class="label_perfil left">Ciudad:</span>
+        <span classs="right"><%= @bar.city %></span>
+      </p>
 
-<p>
-  <b>City:</b>
-  <%= @bar.city %>
-</p>
+      <p>
+        <span class="label_perfil left">Provincia:</span>
+        <span classs="right"><%= @bar.province %></span>
+      </p>
 
-<p>
-  <b>Province:</b>
-  <%= @bar.province %>
-</p>
+      <p>
+        <span class="label_perfil left">País:</span>
+        <span classs="right"><%= @bar.country %></span>
+      </p>
 
-<p>
-  <b>Country:</b>
-  <%= @bar.country %>
-</p>
+      <p>
+        <span class="label_perfil left">Postal code:</span>
+        <span classs="right"><%= @bar.postalcode %></span>
+      </p>
+    </div>
+    <h3 class="field_prefil">Web y redes sociales</h3>
+    <div class="field_prefil">
+      <p>
+        <span class="label_perfil left">Web:</span>
+        <span classs="right"><%= @bar.webpage %></span>
+      </p>
 
-<p>
-  <b>Postalcode:</b>
-  <%= @bar.postalcode %>
-</p>
+      <p>
+        <span class="label_perfil left">Twitter:</span>
+        <span classs="right"><%= @bar.twitter_profile %></span>
+      </p>
 
-<p>
-  <b>Description:</b>
-  <%= @bar.description %>
-</p>
+      <p>
+        <span class="label_perfil left">Facebook:</span>
+        <span classs="right"><%= @bar.facebook_profile %></span>
+      </p>
+    </div>
+   <h3 class="field_prefil">Localización</h3>
+    <div class="field_prefil">
+      <p>
+        <span class="label_perfil left">Latitud:</span>
+        <span classs="right"><%= @bar.latidude %></span>
+      </p>
 
-<p>
-  <b>Webpage:</b>
-  <%= @bar.webpage %>
-</p>
+      <p>
+        <span class="label_perfil left">Longitud:</span>
+       <span classs="right"><%= @bar.longitude %></span>
+      </p>
+    </div>
+    <h3 class="field_prefil">Descripción</h3>
+    <div class="field_prefil">
+      <p>
+        <%= @bar.description %>
+      </p>
+       <p>
+        <span class="label_perfil left">Horario:</span>
+        <span classs="right"><%= @bar.business_hours %></span>
+      </p>
+    </div>
+    <h3 class="field_prefil">Más info</h3>
+    <div class="field_prefil">
+      <p>
+        <span class="label_perfil left">Tags</span>
+        <% @bar.tags.each do |tag| %>
+          <span classs="right"> <%= tag.name %> </span>
+        <% end %>
+      </p>
 
-<p>
-  <b>Twitter profile:</b>
-  <%= @bar.twitter_profile %>
-</p>
+      <p>
+        <span class="label_perfil left">Creado:</span>
+        <span classs="right"><%= @bar.created_at.strftime('%d %B %Y') %> (hace <%= distance_of_time_in_words(DateTime.now, @bar.created_at) %>)</span>
+      </p>
 
-<p>
-  <b>Faceboo kprofile:</b>
-  <%= @bar.facebook_profile %>
-</p>
-
-<p>
-  <b>Business hours:</b>
-  <%= @bar.business_hours %>
-</p>
-
-<p>
-  <b>Latidude:</b>
-  <%= @bar.latidude %>
-</p>
-
-<p>
-  <b>Longitude:</b>
-  <%= @bar.longitude %>
-</p>
-<p>
-  <b>Tags</b>
-  <% @bar.tags.each do |tag| %>
-    <%= tag.name %>
-  <% end %>
-</p>
-
-<p>
-  <b>Created at:</b>
-  <%= @bar.created_at.strftime('%d %B %Y') %> <br/>
-  hace <%= distance_of_time_in_words(DateTime.now, @bar.created_at) %>
-</p>
-
-<p>
-  <b>Updated at:</b>
-  <%= @bar.updated_at.strftime('%d %B %Y') %>
-</p>
-
-
-<%= link_to 'Edit', edit_bar_path(@bar) %> |
-<%= link_to 'Back', bars_path %>
+      <p>
+        <span class="label_perfil left">Modificado:</span>
+        <span classs="right"><%= @bar.updated_at.strftime('%d %B %Y') %></span>
+      </p>
+    </div>
+  </div>
+</div>

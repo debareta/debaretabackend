@@ -1,5 +1,11 @@
-<h1>debareta</h1>
-<p>
-  <%= link_to 'Login', login_path %> | <%= link_to 'Join Us!', signup_path %>
-</p>
-<p><%= link_to 'Bares', bars_path %></p>
+<div class="navbar">
+    <div class="btn-group">
+        <div class="btn btn-menu span50 btn-small fuente1 left"><%= link_to 'Nuevo Bar', new_bar_path %></div>
+        <div class="btn btn-menu span50 btn-small fuente1 left"><%= link_to 'Listado de Bares', bars_path %></div>
+    </div>
+</div>
+
+<div class="container centrado">
+	<h2 class="asi">¡¡¡This Is How We Do It!!!</h2>
+	<%= image_tag("davidpedo.jpg", :alt => "davidpedo") %>
+</div>

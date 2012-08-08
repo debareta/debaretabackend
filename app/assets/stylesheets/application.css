@@ -11,3 +11,108 @@
  *= require_self
  *= require_tree .
  */
+
+
+
+
+/* Generales */
+
+*::selection {
+background: #CDB553;
+}
+*::-moz-selection {
+background: #CDB553;
+}
+a{text-decoration: none !important;}
+a:hover{background: none !important;}
+footer{margin: 20px 0 0 0; }
+.left {float: left;}
+.right {float: right !important;}
+.Trighttext-align: right;}
+.centrado{text-align: center;}
+.limpiar {clear: both;}
+.new{float: right; margin: 20px 100px 0 0; font-size: 20px; border: 1px solid #ccc; border-radius: 20px; padding: 10px;}
+.nuevoB{font-size: 50px; padding: 10px 10px 5px 10px; border-bottom: 5px solid #70731f; font-weight: normal; color: #70731f; margin: 20px 0 30px 0;}
+.marginB{margin-bottom: 60px;}
+.margin1{margin: 20px 0 40px 0;}
+footer .barra1{padding: 10px;}
+.anchoTD{width: 100px !important;}
+.fuente1{font-size: 20px !important;}
+.fuente2{font-family: 'Comfortaa', cursive;}
+.label_perfil{width: 150px; font-weight: bold; color: #70731f;}
+#notice {color: green; font-size: 17px; padding: 5px 10px;}
+
+/* Barra */
+
+.barra1{padding: 0 40px; color: #fff;
+background-color: #262401;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#262401), to(#2d2b01)); /* Saf4+, Chrome */
+  background-image: -webkit-linear-gradient(top, #262401, #2d2b01); /* Chrome 10+, Saf5.1+, iOS 5+ */
+  background-image:    -moz-linear-gradient(top, #262401, #2d2b01); /* Firefox 3.6-15 */
+  background-image:      -o-linear-gradient(top, #262401, #2d2b01); /* Opera 11.10+ */
+  background-image:         linear-gradient(to bottom, #262401, #2d2b01); /* Firefox 16+ */
+}
+.barra2{}
+.navbar{box-shadow: 0px 8px 10px;}
+.navbar2{box-shadow: 0px; height: 53px !important; overflow: hidden; border-radius: 10px; margin-top: 30px;}
+.debareta{font-size: 40px; float: left; font-family: 'Damion', cursive; font-weight: normal;}
+.gestion_bares{float: right; font-size: 30px; margin: 10px 0 0 0; font-family: 'Damion', cursive; font-weight: normal;}
+.asi{font-size: 70px; font-family: 'Damion', cursive; font-weight: normal; margin: 50px 0 20px 0;}
+
+
+/* Menus */
+
+.btn-menu{padding: 10px 10px !important;
+  background-color: #b8a03e !important;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#b8a03e), to(#cdb553)) !important; /* Saf4+, Chrome */
+  background-image: -webkit-linear-gradient(top, #b8a03e, #cdb553) !important; /* Chrome 10+, Saf5.1+, iOS 5+ */
+  background-image:    -moz-linear-gradient(top, #b8a03e, #cdb553) !important; /* Firefox 3.6-15 */
+  background-image:      -o-linear-gradient(top, #b8a03e, #cdb553) !important; /* Opera 11.10+ */
+  background-image:         linear-gradient(to bottom, #b8a03e, #cdb553) !important; /* Firefox 16+ */
+}
+.btn-menu:hover{background: #b8a03e !important;}
+.btn-menu a{color: #fff !important; text-shadow: none;}
+
+
+/* Formulario nuevo bar */
+
+label{display: block; margin-bottom: 5px;}
+input{display: block; border-radius: 10px;}
+.formulario{margin: 0 auto; width: 815px; padding-left: 50px;}
+.field {width: 225px; float: left; padding: 10px; border: 2px solid #70731f; border-radius: 10px; margin-left: 5px;}
+.field textarea{height: 44px; width: 222px; border-radius: 10px;}
+.field p{color: #ccc;}
+.field_prefil {padding: 10px; border: 2px solid #70731f; border-radius: 10px;}
+.field_prefil p{font-size: 17px !important; border-bottom: 1px solid #70731f; line-height: 21px;}
+h3.field_prefil{margin-bottom: 10px; margin-top: 5px; cursor: pointer; color: #fff; font-weight: normal; font-size: 20px; padding-top: 5px; padding-bottom: 5px; 
+	 background-color: #b8a03e !important;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#b8a03e), to(#cdb553)) !important; /* Saf4+, Chrome */
+  background-image: -webkit-linear-gradient(top, #b8a03e, #cdb553) !important; /* Chrome 10+, Saf5.1+, iOS 5+ */
+  background-image:    -moz-linear-gradient(top, #b8a03e, #cdb553) !important; /* Firefox 3.6-15 */
+  background-image:      -o-linear-gradient(top, #b8a03e, #cdb553) !important; /* Opera 11.10+ */
+  background-image:         linear-gradient(to bottom, #b8a03e, #cdb553) !important; /* Firefox 16+ */
+}
+.photo{float: left; width: 228px; height: 86px;}
+.btn-menu input{font-size: 30px; padding: 0; border: none; box-shadow: none; background: none; color: #fff;}
+
+
+
+/* Tabla */
+
+.tabla{margin: 0 auto; overflow-x: scroll; padding-bottom: 20px;}
+.dataTables_length{float: left; margin: 20px 0 50px 0; padding: 10px; border: 2px solid #70731f; border-radius: 10px;}
+.dataTables_filter{float: right; padding: 10px; border: 2px solid #70731f; border-radius: 10px;}
+.dataTables_info{width: 160px; float: left; padding: 5px 10px; margin-left: 10px; border: 2px solid #70731f; border-radius: 10px; width: auto;}
+#example_length select{display: inline; margin: 0 10px 0 10px;}
+#example_paginate{width: 100px;float: right;  margin-right: 60px;}
+#example_paginate a{color: #000; padding: 5px 10px; border: 2px solid #70731f; border-radius: 10px; cursor: pointer;}
+#example_paginate a:first-child{margin-right: 10px;}
+.btn-success a{color: #fff;} 
+.btn-danger a{color: #fff;}
+.btn-warning a{color: #fff;}
+.tabla .btn-danger a:hover{color: #fff;}
+.tabla .btn-warning a:hover{color: #fff;}
+.tabla .btn-danger:hover{background: #bd362f !important;}
+.tabla .btn-warning:hover{background: #c67605 !important;}
+th{text-align: center; cursor: pointer;}
+

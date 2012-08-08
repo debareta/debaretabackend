@@ -1,14 +1,42 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Debareta.com</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-
-<%= yield %>
-
-</body>
+	<head>
+	  	<title>Debareta.com</title>
+	  	<%= stylesheet_link_tag    "application", :media => "all" %>
+	  	<link href='http://fonts.googleapis.com/css?family=Damion' rel='stylesheet' type='text/css'>
+	  	<link href='http://fonts.googleapis.com/css?family=Damion|Comfortaa' rel='stylesheet' type='text/css'>
+	  	<%= javascript_include_tag "application" %>
+	  	<%= csrf_meta_tags %>
+	</head>
+	
+	<body>
+		<header>
+			<div class="barra1">
+			    <h1 class="debareta">DeBaReTa</h1>
+			    <h2 class="gestion_bares">GESTIÓN DE BARES</h2>
+		    	<div class="limpiar"></div>
+		    </div>
+		</header>
+		<section>
+                        <p class=""><%= notice %></p>
+                        <p class=""><%= alert %></p>
+                        <% if user_signed_in? %>
+                          <li>
+                          <%= link_to('Logout', destroy_user_session_path) %> | <%= link_to('Edit registration', edit_user_registration_path) %>       
+                          </li>
+                        <% else %>
+                          <li>
+                          <%= link_to('Login', new_user_session_path)  %>  | <%= link_to('Register', new_user_registration_path)  %>
+                          </li>
+                        <% end %>                        
+			<%= yield %>
+		</section>
+		<div class="limpiar"></div>
+		<footer>
+			<div class="barra1 centrado">
+			    <h4>La mejor app de Bares</h4>
+		    	<div class="limpiar"></div>
+		    </div>
+		</footer>
+	</body>
 </html>
